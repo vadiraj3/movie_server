@@ -18,6 +18,8 @@ app.use(helmet());
 app.use(express.json());
 app.use(cors());
 
+app.get('/',(req,res)=>{
+	res.send("hello , it's running")});
 app.use('/kfi-api/v1/user', userRouter);
 app.use('/kfi-api/v1/movies', movieRouter);
 app.use('/kfi-api/v1/actors', actorRouter);
